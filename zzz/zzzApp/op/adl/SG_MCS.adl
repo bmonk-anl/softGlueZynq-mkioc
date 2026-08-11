@@ -1,0 +1,713 @@
+
+file {
+	name="/net/s100dserv/xorApps/zed/epics/ioc/ioczed/zzzApp/op/adl/SG_MCS.adl"
+	version=030111
+}
+display {
+	object {
+		x=944
+		y=434
+		width=680
+		height=370
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+rectangle {
+	object {
+		x=4
+		y=40
+		width=350
+		height=325
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+rectangle {
+	object {
+		x=12
+		y=47
+		width=200
+		height=60
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+rectangle {
+	object {
+		x=40
+		y=5
+		width=600
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+}
+rectangle {
+	object {
+		x=365
+		y=40
+		width=310
+		height=325
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+text {
+	object {
+		x=217
+		y=68
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Acquire"
+}
+"message button" {
+	object {
+		x=113
+		y=79
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)EraseAll"
+		clr=14
+		bclr=51
+	}
+	label="Erase"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=18
+		y=79
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)EraseStart"
+		clr=14
+		bclr=51
+	}
+	label="Erase/Start"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=18
+		y=54
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)StartAll"
+		clr=14
+		bclr=51
+	}
+	label="Start"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=113
+		y=54
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)StopAll"
+		clr=14
+		bclr=51
+	}
+	label="Stop"
+	press_msg="1"
+}
+text {
+	object {
+		x=160
+		y=6
+		width=360
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="SG MCS Control  $(P)$(Q)"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=18
+		y=162
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)PresetReal"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=125
+		y=162
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Preset time"
+}
+"text update" {
+	object {
+		x=15
+		y=137
+		width=103
+		height=20
+	}
+	monitor {
+		chan="$(P)$(Q)ElapsedReal"
+		clr=54
+		bclr=4
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=125
+		y=137
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Elapsed time"
+}
+"text entry" {
+	object {
+		x=18
+		y=212
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)Prescale"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=125
+		y=212
+		width=141
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ext. prescale"
+}
+text {
+	object {
+		x=28
+		y=112
+		width=90
+		height=20
+	}
+	"basic attribute" {
+		clr=18
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="$(P)$(Q)Acquiring"
+	}
+	textix="Acquiring"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=78
+		y=112
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=21
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="$(P)$(Q)Acquiring"
+	}
+	textix="Done"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=125
+		y=112
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Status"
+}
+"related display" {
+	object {
+		x=375
+		y=55
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Inputs 1-8"
+		name="SG_MCS_8_plots.adl"
+		args="P=$(P)$(Q),A=mcs1,B=mcs2,C=mcs3,D=mcs4,E=mcs5,F=mcs6,G=mcs7,H=mcs8"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=439
+		y=55
+		width=200
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Combined Plots"
+}
+"related display" {
+	object {
+		x=375
+		y=80
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Channel 1"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs1"
+	}
+	display[1] {
+		label="Channel 2"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs2"
+	}
+	display[2] {
+		label="Channel 3"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs3"
+	}
+	display[3] {
+		label="Channel 4"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs4"
+	}
+	display[4] {
+		label="Channel 5"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs5"
+	}
+	display[5] {
+		label="Channel 6"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs6"
+	}
+	display[6] {
+		label="Channel 7"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q),M=mcs7"
+	}
+	display[7] {
+		label="Channel 8"
+		name="SG_MCS_plot.adl"
+		args="P=$(P)$(Q) M=mcs8"
+	}
+	clr=14
+	bclr=4
+}
+text {
+	object {
+		x=439
+		y=80
+		width=200
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Individual Plots 1-8"
+}
+"text update" {
+	object {
+		x=375
+		y=232
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(Q)CurrentChannel"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=232
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Current channel"
+}
+text {
+	object {
+		x=125
+		y=312
+		width=220
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Channel 1 source"
+}
+menu {
+	object {
+		x=18
+		y=312
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)Channel1Source"
+		clr=14
+		bclr=51
+	}
+}
+text {
+	object {
+		x=125
+		y=287
+		width=220
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software chan. advance"
+}
+"message button" {
+	object {
+		x=18
+		y=287
+		width=100
+		height=18
+	}
+	control {
+		chan="$(P)$(Q)SoftwareChannelAdvance"
+		clr=14
+		bclr=51
+	}
+	label="Advance"
+	press_msg="1"
+}
+text {
+	object {
+		x=125
+		y=262
+		width=220
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Count on start"
+}
+menu {
+	object {
+		x=18
+		y=262
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)CountOnStart"
+		clr=14
+		bclr=51
+	}
+}
+menu {
+	object {
+		x=18
+		y=237
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)ChannelAdvance"
+		clr=14
+		bclr=51
+	}
+}
+text {
+	object {
+		x=125
+		y=237
+		width=220
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Channel advance source"
+}
+text {
+	object {
+		x=460
+		y=206
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="# channels to use"
+}
+"text entry" {
+	object {
+		x=375
+		y=205
+		width=80
+		height=22
+	}
+	control {
+		chan="$(P)$(Q)NuseAll"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=375
+		y=180
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(Q)MaxChannels"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=180
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max. # of channels"
+}
+"text entry" {
+	object {
+		x=18
+		y=187
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)Dwell"
+		clr=14
+		bclr=51
+	}
+	format="exponential"
+	limits {
+	}
+}
+text {
+	object {
+		x=125
+		y=187
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Dwell time"
+}
+menu {
+	object {
+		x=18
+		y=337
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)ReadAll.SCAN"
+		clr=14
+		bclr=51
+	}
+}
+text {
+	object {
+		x=125
+		y=337
+		width=90
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Read rate"
+}
+"message button" {
+	object {
+		x=225
+		y=337
+		width=50
+		height=20
+	}
+	control {
+		chan="$(P)$(Q)DoReadAll.VAL"
+		clr=14
+		bclr=51
+	}
+	label="Read"
+	press_msg="1"
+}
+"related display" {
+	object {
+		x=601
+		y=341
+		width=70
+		height=20
+	}
+	display[0] {
+		label="checkFIFO_flushed"
+		name="yyCalcoutRecord.adl"
+		args="P=zzz:,C=mcs:checkFIFO_flushed"
+	}
+	display[1] {
+		label="whenDone"
+		name="yySseq_full.adl"
+		args="P=zzz:,S=mcs:whenDone"
+	}
+	clr=0
+	bclr=17
+	label="-debug"
+}

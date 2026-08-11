@@ -1,0 +1,581 @@
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 180309-123624
+8idMZ4:SGMenu:currName firstBoot2023.1
+8idMZ4:SGMenu:currDesc 
+8idMZ4:SG:ReadRate.SCAN 8
+8idMZ4:SG:AND-1_desc 
+8idMZ4:SG:AND-1_IN1_Signal 1ShutterManual
+8idMZ4:SG:AND-1_IN2_Signal 1ShutterOverride
+8idMZ4:SG:AND-1_OUT_Signal SM1
+8idMZ4:SG:AND-2_desc 
+8idMZ4:SG:AND-2_IN1_Signal ShutterSignal
+8idMZ4:SG:AND-2_IN2_Signal ShutterOverride*
+8idMZ4:SG:AND-2_OUT_Signal SS1
+8idMZ4:SG:AND-3_desc 
+8idMZ4:SG:AND-3_IN1_Signal 
+8idMZ4:SG:AND-3_IN2_Signal 
+8idMZ4:SG:AND-3_OUT_Signal 
+8idMZ4:SG:AND-4_desc 
+8idMZ4:SG:AND-4_IN1_Signal 
+8idMZ4:SG:AND-4_IN2_Signal 
+8idMZ4:SG:AND-4_OUT_Signal 
+8idMZ4:SG:OR-1_desc 
+8idMZ4:SG:OR-1_IN1_Signal SM1
+8idMZ4:SG:OR-1_IN2_Signal SS1
+8idMZ4:SG:OR-1_OUT_Signal ShutterDrive
+8idMZ4:SG:OR-2_desc 
+8idMZ4:SG:OR-2_IN1_Signal 
+8idMZ4:SG:OR-2_IN2_Signal 
+8idMZ4:SG:OR-2_OUT_Signal 
+8idMZ4:SG:OR-3_desc 
+8idMZ4:SG:OR-3_IN1_Signal 
+8idMZ4:SG:OR-3_IN2_Signal 
+8idMZ4:SG:OR-3_OUT_Signal 
+8idMZ4:SG:OR-4_desc 
+8idMZ4:SG:OR-4_IN1_Signal 
+8idMZ4:SG:OR-4_IN2_Signal 
+8idMZ4:SG:OR-4_OUT_Signal 
+8idMZ4:SG:XOR-1_desc 
+8idMZ4:SG:XOR-1_IN1_Signal 
+8idMZ4:SG:XOR-1_IN2_Signal 
+8idMZ4:SG:XOR-1_OUT_Signal 
+8idMZ4:SG:XOR-2_desc 
+8idMZ4:SG:XOR-2_IN1_Signal 
+8idMZ4:SG:XOR-2_IN2_Signal 
+8idMZ4:SG:XOR-2_OUT_Signal 
+8idMZ4:SG:BUFFER-1_desc 
+8idMZ4:SG:BUFFER-1_IN_Signal 1!
+8idMZ4:SG:BUFFER-1_OUT_Signal 
+8idMZ4:SG:BUFFER-2_desc 
+8idMZ4:SG:BUFFER-2_IN_Signal 
+8idMZ4:SG:BUFFER-2_OUT_Signal 
+8idMZ4:SG:BUFFER-3_desc 
+8idMZ4:SG:BUFFER-3_IN_Signal 
+8idMZ4:SG:BUFFER-3_OUT_Signal 
+8idMZ4:SG:BUFFER-4_desc 
+8idMZ4:SG:BUFFER-4_IN_Signal 
+8idMZ4:SG:BUFFER-4_OUT_Signal 
+8idMZ4:SG:DFF-1_desc 
+8idMZ4:SG:DFF-1_CLEAR_Signal 
+8idMZ4:SG:DFF-1_CLOCK_Signal 
+8idMZ4:SG:DFF-1_D_Signal 
+8idMZ4:SG:DFF-1_OUT_Signal 
+8idMZ4:SG:DFF-1_SET_Signal 
+8idMZ4:SG:DFF-2_desc 
+8idMZ4:SG:DFF-2_CLEAR_Signal 
+8idMZ4:SG:DFF-2_CLOCK_Signal 
+8idMZ4:SG:DFF-2_D_Signal 
+8idMZ4:SG:DFF-2_OUT_Signal 
+8idMZ4:SG:DFF-2_SET_Signal 
+8idMZ4:SG:DFF-3_desc 
+8idMZ4:SG:DFF-3_CLEAR_Signal 
+8idMZ4:SG:DFF-3_CLOCK_Signal 
+8idMZ4:SG:DFF-3_D_Signal 
+8idMZ4:SG:DFF-3_OUT_Signal 
+8idMZ4:SG:DFF-3_SET_Signal 
+8idMZ4:SG:DFF-4_desc 
+8idMZ4:SG:DFF-4_CLEAR_Signal 
+8idMZ4:SG:DFF-4_CLOCK_Signal 
+8idMZ4:SG:DFF-4_D_Signal 
+8idMZ4:SG:DFF-4_OUT_Signal 
+8idMZ4:SG:DFF-4_SET_Signal 
+8idMZ4:SG:DnCntr-1_desc 
+8idMZ4:SG:DnCntr-1_CLOCK_Signal 
+8idMZ4:SG:DnCntr-1_ENABLE_Signal 
+8idMZ4:SG:DnCntr-1_LOAD_Signal 
+8idMZ4:SG:DnCntr-1_OUT_Signal 
+8idMZ4:SG:DnCntr-1_PRESET 0
+8idMZ4:SG:DnCntr-2_desc 
+8idMZ4:SG:DnCntr-2_CLOCK_Signal 
+8idMZ4:SG:DnCntr-2_ENABLE_Signal 
+8idMZ4:SG:DnCntr-2_LOAD_Signal 
+8idMZ4:SG:DnCntr-2_OUT_Signal 
+8idMZ4:SG:DnCntr-2_PRESET 0
+8idMZ4:SG:DnCntr-3_desc 
+8idMZ4:SG:DnCntr-3_CLOCK_Signal 
+8idMZ4:SG:DnCntr-3_ENABLE_Signal 
+8idMZ4:SG:DnCntr-3_LOAD_Signal 
+8idMZ4:SG:DnCntr-3_OUT_Signal 
+8idMZ4:SG:DnCntr-3_PRESET 0
+8idMZ4:SG:DnCntr-4_desc 
+8idMZ4:SG:DnCntr-4_CLOCK_Signal 
+8idMZ4:SG:DnCntr-4_ENABLE_Signal 
+8idMZ4:SG:DnCntr-4_LOAD_Signal 
+8idMZ4:SG:DnCntr-4_OUT_Signal 
+8idMZ4:SG:DnCntr-4_PRESET 0
+8idMZ4:SG:UpCntr-1_desc rheo A2
+8idMZ4:SG:UpCntr-1_CLEAR_Signal 1!
+8idMZ4:SG:UpCntr-1_CLOCK_Signal rheoA2
+8idMZ4:SG:UpCntr-1_ENABLE_Signal 
+8idMZ4:SG:UpCntr-2_desc 
+8idMZ4:SG:UpCntr-2_CLEAR_Signal 1!
+8idMZ4:SG:UpCntr-2_CLOCK_Signal clock10M
+8idMZ4:SG:UpCntr-2_ENABLE_Signal EN 3M
+8idMZ4:SG:UpCntr-3_desc 
+8idMZ4:SG:UpCntr-3_CLEAR_Signal 
+8idMZ4:SG:UpCntr-3_CLOCK_Signal 
+8idMZ4:SG:UpCntr-3_ENABLE_Signal 
+8idMZ4:SG:UpCntr-4_desc 
+8idMZ4:SG:UpCntr-4_CLEAR_Signal 
+8idMZ4:SG:UpCntr-4_CLOCK_Signal 
+8idMZ4:SG:UpCntr-4_ENABLE_Signal 
+8idMZ4:SG:DEMUX2-1_desc 
+8idMZ4:SG:DEMUX2-1_IN_Signal 
+8idMZ4:SG:DEMUX2-1_OUT0_Signal 
+8idMZ4:SG:DEMUX2-1_OUT1_Signal 
+8idMZ4:SG:DEMUX2-1_SEL_Signal 
+8idMZ4:SG:DEMUX2-2_desc 
+8idMZ4:SG:DEMUX2-2_IN_Signal 
+8idMZ4:SG:DEMUX2-2_OUT0_Signal 
+8idMZ4:SG:DEMUX2-2_OUT1_Signal 
+8idMZ4:SG:DEMUX2-2_SEL_Signal 
+8idMZ4:SG:MUX2-1_desc 
+8idMZ4:SG:MUX2-1_IN0_Signal ShutterSigIn
+8idMZ4:SG:MUX2-1_IN1_Signal ShutterBurst
+8idMZ4:SG:MUX2-1_OUT_Signal ShutterSignal
+8idMZ4:SG:MUX2-1_SEL_Signal 0
+8idMZ4:SG:MUX2-2_desc 
+8idMZ4:SG:MUX2-2_IN0_Signal 
+8idMZ4:SG:MUX2-2_IN1_Signal 
+8idMZ4:SG:MUX2-2_OUT_Signal 
+8idMZ4:SG:MUX2-2_SEL_Signal 
+8idMZ4:SG:DivByN-1_desc 
+8idMZ4:SG:DivByN-1_CLOCK_Signal 
+8idMZ4:SG:DivByN-1_ENABLE_Signal 
+8idMZ4:SG:DivByN-1_OUT_Signal 
+8idMZ4:SG:DivByN-1_RESET_Signal 
+8idMZ4:SG:DivByN-1_N 0
+8idMZ4:SG:DivByN-2_desc 
+8idMZ4:SG:DivByN-2_CLOCK_Signal 
+8idMZ4:SG:DivByN-2_ENABLE_Signal 
+8idMZ4:SG:DivByN-2_OUT_Signal 
+8idMZ4:SG:DivByN-2_RESET_Signal 
+8idMZ4:SG:DivByN-2_N 0
+8idMZ4:SG:DivByN-3_desc 
+8idMZ4:SG:DivByN-3_CLOCK_Signal 
+8idMZ4:SG:DivByN-3_ENABLE_Signal 
+8idMZ4:SG:DivByN-3_OUT_Signal 
+8idMZ4:SG:DivByN-3_RESET_Signal 
+8idMZ4:SG:DivByN-3_N 0
+8idMZ4:SG:DivByN-4_desc 
+8idMZ4:SG:DivByN-4_CLOCK_Signal 
+8idMZ4:SG:DivByN-4_ENABLE_Signal 
+8idMZ4:SG:DivByN-4_OUT_Signal 
+8idMZ4:SG:DivByN-4_RESET_Signal 
+8idMZ4:SG:DivByN-4_N 0
+8idMZ4:SG:UpDnCntr-1_desc 
+8idMZ4:SG:UpDnCntr-1_CLOCK_Signal 
+8idMZ4:SG:UpDnCntr-1_UPDOWN_Signal 
+8idMZ4:SG:UpDnCntr-1_ENABLE_Signal 
+8idMZ4:SG:UpDnCntr-1_CLEAR_Signal 
+8idMZ4:SG:UpDnCntr-1_LOAD_Signal 
+8idMZ4:SG:UpDnCntr-1_OUT_Signal 
+8idMZ4:SG:UpDnCntr-1_PRESET 0
+8idMZ4:SG:UpDnCntr-2_desc 
+8idMZ4:SG:UpDnCntr-2_CLOCK_Signal 
+8idMZ4:SG:UpDnCntr-2_UPDOWN_Signal 
+8idMZ4:SG:UpDnCntr-2_ENABLE_Signal 
+8idMZ4:SG:UpDnCntr-2_CLEAR_Signal 
+8idMZ4:SG:UpDnCntr-2_LOAD_Signal 
+8idMZ4:SG:UpDnCntr-2_OUT_Signal 
+8idMZ4:SG:UpDnCntr-2_PRESET 0
+8idMZ4:SG:UpDnCntr-3_desc 
+8idMZ4:SG:UpDnCntr-3_CLOCK_Signal 
+8idMZ4:SG:UpDnCntr-3_UPDOWN_Signal 
+8idMZ4:SG:UpDnCntr-3_ENABLE_Signal 
+8idMZ4:SG:UpDnCntr-3_CLEAR_Signal 
+8idMZ4:SG:UpDnCntr-3_LOAD_Signal 
+8idMZ4:SG:UpDnCntr-3_OUT_Signal 
+8idMZ4:SG:UpDnCntr-3_PRESET 0
+8idMZ4:SG:UpDnCntr-4_desc 
+8idMZ4:SG:UpDnCntr-4_CLOCK_Signal 
+8idMZ4:SG:UpDnCntr-4_UPDOWN_Signal 
+8idMZ4:SG:UpDnCntr-4_ENABLE_Signal 
+8idMZ4:SG:UpDnCntr-4_CLEAR_Signal 
+8idMZ4:SG:UpDnCntr-4_LOAD_Signal 
+8idMZ4:SG:UpDnCntr-4_OUT_Signal 
+8idMZ4:SG:UpDnCntr-4_PRESET 0
+8idMZ4:SG:QuadDec-1_desc 
+8idMZ4:SG:QuadDec-1_A_Signal 
+8idMZ4:SG:QuadDec-1_B_Signal 
+8idMZ4:SG:QuadDec-1_CLOCK_Signal 
+8idMZ4:SG:QuadDec-1_STEP_Signal 
+8idMZ4:SG:QuadDec-1_DIR_Signal 
+8idMZ4:SG:QuadDec-1_MISS_Signal 
+8idMZ4:SG:QuadDec-1_MISSCLR_Signal 
+8idMZ4:SG:QuadDec-2_desc 
+8idMZ4:SG:QuadDec-2_A_Signal 
+8idMZ4:SG:QuadDec-2_B_Signal 
+8idMZ4:SG:QuadDec-2_CLOCK_Signal 
+8idMZ4:SG:QuadDec-2_STEP_Signal 
+8idMZ4:SG:QuadDec-2_DIR_Signal 
+8idMZ4:SG:QuadDec-2_MISS_Signal 
+8idMZ4:SG:QuadDec-2_MISSCLR_Signal 
+8idMZ4:SG:GateDly-1_desc 
+8idMZ4:SG:GateDly-1_CLK_Signal 
+8idMZ4:SG:GateDly-1_IN_Signal 
+8idMZ4:SG:GateDly-1_OUT_Signal 
+8idMZ4:SG:GateDly-1_DLY 0
+8idMZ4:SG:GateDly-1_WIDTH 0
+8idMZ4:SG:GateDly-2_desc 
+8idMZ4:SG:GateDly-2_CLK_Signal 
+8idMZ4:SG:GateDly-2_IN_Signal 
+8idMZ4:SG:GateDly-2_OUT_Signal 
+8idMZ4:SG:GateDly-2_DLY 0
+8idMZ4:SG:GateDly-2_WIDTH 0
+8idMZ4:SG:GateDly-3_desc 
+8idMZ4:SG:GateDly-3_CLK_Signal 
+8idMZ4:SG:GateDly-3_IN_Signal 
+8idMZ4:SG:GateDly-3_OUT_Signal 
+8idMZ4:SG:GateDly-3_DLY 0
+8idMZ4:SG:GateDly-3_WIDTH 0
+8idMZ4:SG:GateDly-4_desc 
+8idMZ4:SG:GateDly-4_CLK_Signal 
+8idMZ4:SG:GateDly-4_IN_Signal 
+8idMZ4:SG:GateDly-4_OUT_Signal 
+8idMZ4:SG:GateDly-4_DLY 0
+8idMZ4:SG:GateDly-4_WIDTH 0
+8idMZ4:SG:HistScal-1_desc 
+8idMZ4:SG:HistScal-1_EN_Signal 
+8idMZ4:SG:HistScal-1_SYNC_Signal 
+8idMZ4:SG:HistScal-1_CLK_Signal 
+8idMZ4:SG:HistScal-1_DET_Signal 
+8idMZ4:SG:HistScal-1_CLEAR_Signal 
+8idMZ4:SG:HistScal-1_READ_Signal 
+8idMZ4:SG:HistScal-1_DET2_Signal 
+8idMZ4:SG:HistScal-1_MODE_Signal 
+8idMZ4:SG:pixelTrig-1_EN_Signal 
+8idMZ4:SG:pixelTrig-1_CLOCK_Signal 
+8idMZ4:SG:pixelTrig-1_CLEAR_Signal 
+8idMZ4:SG:pixelTrig-1_MISSCLR_Signal 
+8idMZ4:SG:pixelTrig-1_LOAD_Signal 
+8idMZ4:SG:pixelTrig-1_A1_Signal 
+8idMZ4:SG:pixelTrig-1_B1_Signal 
+8idMZ4:SG:pixelTrig-1_A2_Signal 
+8idMZ4:SG:pixelTrig-1_B2_Signal 
+8idMZ4:SG:pixelTrig-1_PRESET 0
+8idMZ4:SG:pixelTrig-1_PRETRIG 0
+8idMZ4:SG:pixelTrig-1_TRIG_Signal 
+8idMZ4:SG:pixelTrig-1_MISS_Signal 
+8idMZ4:SG:pixelTrig-2_EN_Signal 
+8idMZ4:SG:pixelTrig-2_CLOCK_Signal 
+8idMZ4:SG:pixelTrig-2_CLEAR_Signal 
+8idMZ4:SG:pixelTrig-2_MISSCLR_Signal 
+8idMZ4:SG:pixelTrig-2_LOAD_Signal 
+8idMZ4:SG:pixelTrig-2_A1_Signal 
+8idMZ4:SG:pixelTrig-2_B1_Signal 
+8idMZ4:SG:pixelTrig-2_A2_Signal 
+8idMZ4:SG:pixelTrig-2_B2_Signal 
+8idMZ4:SG:pixelTrig-2_PRESET 0
+8idMZ4:SG:pixelTrig-2_PRETRIG 0
+8idMZ4:SG:pixelTrig-2_TRIG_Signal 
+8idMZ4:SG:pixelTrig-2_MISS_Signal 
+8idMZ4:SG:PixelTrig_TRIG_Signal 
+8idMZ4:SG:PixelTrig_ENTRIG_Signal 
+8idMZ4:SG:scalToStream-1_desc 
+8idMZ4:SG:scalToStream-1_CHADV_Signal 
+8idMZ4:SG:scalToStream-1_ADVDONE_Signal 
+8idMZ4:SG:scalToStream-1_FULL_Signal 
+8idMZ4:SG:scalToStream-1_RESET_Signal 
+8idMZ4:SG:scalToStream-1_DMAWORDS 0
+8idMZ4:SG:scalersToFIFO-1_CHADV_Signal 
+8idMZ4:SG:scalersToFIFO-1_WRTCK_Signal 
+8idMZ4:SG:FreqCntr-1_desc 
+8idMZ4:SG:FreqCntr-1_CLK_Signal 
+8idMZ4:SG:Scaler-1_Q_Signal 
+8idMZ4:SG:Scaler-1_CNTG_Signal 
+8idMZ4:SG:Scaler-1_CLK_Signal 
+8idMZ4:SG:Scaler-1_EN_Signal 
+8idMZ4:SG:Scaler-1_CNT_Signal 
+8idMZ4:SG:Scaler-1_STOP_Signal 
+8idMZ4:SG:Scaler-1_CLR_Signal 
+8idMZ4:SG:Scaler-1_PRESET 0
+8idMZ4:SG:plsTrn-1_Clk_Signal clock10M
+8idMZ4:SG:plsTrn-1_Inp_Signal 1!
+8idMZ4:SG:plsTrn-1_Dis_Signal 0
+8idMZ4:SG:plsTrn-1_Q_Signal 
+8idMZ4:SG:plsTrn-1_NPULSES 10
+8idMZ4:SG:plsTrn-1_PERIOD 10000000
+8idMZ4:SG:plsTrn-1_WIDTH 0
+8idMZ4:SG:HW_OR-1_OUT_Signal 
+8idMZ4:SG:HW_OR-2_OUT_Signal 
+8idMZ4:SG:10MHZ_CLOCK_Signal clock10M
+8idMZ4:SG:20MHZ_CLOCK_Signal 
+8idMZ4:SG:50MHZ_CLOCK_Signal 
+8idMZ4:SG:VAR_CLOCK_Signal 
+8idMZ4:SG:FI1_Signal EN 3M
+8idMZ4:SG:FI2_Signal ShutterManual
+8idMZ4:SG:FI3_Signal ShutterSigIn
+8idMZ4:SG:FI4_Signal ShutterBurst
+8idMZ4:SG:FI5_Signal rheoA2
+8idMZ4:SG:FI6_Signal 
+8idMZ4:SG:FI7_Signal 
+8idMZ4:SG:FI8_Signal 
+8idMZ4:SG:FI9_Signal 
+8idMZ4:SG:FI10_Signal 
+8idMZ4:SG:FI11_Signal 
+8idMZ4:SG:FI12_Signal 
+8idMZ4:SG:FI13_Signal 
+8idMZ4:SG:FI14_Signal 
+8idMZ4:SG:FI15_Signal 
+8idMZ4:SG:FI16_Signal 
+8idMZ4:SG:FI17_Signal 
+8idMZ4:SG:FI18_Signal 
+8idMZ4:SG:FI19_Signal 
+8idMZ4:SG:FI20_Signal 
+8idMZ4:SG:FI23_Signal 
+8idMZ4:SG:FI24_Signal 
+8idMZ4:SG:FI25_Signal 
+8idMZ4:SG:FI26_Signal 
+8idMZ4:SG:FI27_Signal 
+8idMZ4:SG:FI28_Signal 
+8idMZ4:SG:FI29_Signal 
+8idMZ4:SG:FI30_Signal 
+8idMZ4:SG:FI31_Signal 
+8idMZ4:SG:FO1_Signal ShutterDrive
+8idMZ4:SG:FO2_Signal 
+8idMZ4:SG:FO3_Signal 
+8idMZ4:SG:FO4_Signal 
+8idMZ4:SG:FO5_Signal 
+8idMZ4:SG:FO6_Signal 
+8idMZ4:SG:FO7_Signal 
+8idMZ4:SG:FO8_Signal 
+8idMZ4:SG:FO9_Signal 
+8idMZ4:SG:FO10_Signal 
+8idMZ4:SG:FO11_Signal 
+8idMZ4:SG:FO12_Signal 
+8idMZ4:SG:FO13_Signal 
+8idMZ4:SG:FO14_Signal 
+8idMZ4:SG:FO15_Signal 
+8idMZ4:SG:FO16_Signal 
+8idMZ4:SG:FO21_Signal 
+8idMZ4:SG:FO22_Signal 
+8idMZ4:SG:FO23_Signal 
+8idMZ4:SG:FO24_Signal 
+8idMZ4:SG:circuit_desc 
+8idMZ4:SG:50MHZ_CLOCK_desc 
+8idMZ4:SG:20MHZ_CLOCK_desc 
+8idMZ4:SG:10MHZ_CLOCK_desc 
+8idMZ4:SG:VAR_CLOCK_desc 
+8idMZ4:SG:HW_OR-1_desc 
+8idMZ4:SG:HW_OR-2_desc 
+8idMZ4:SG:streamMux 0
+8idMZ4:SG:FO9Mux 0
+8idMZ4:SG:FO10Mux 0
+8idMZ4:SG:FO11Mux 0
+8idMZ4:SG:FO12Mux 0
+8idMZ4:SG:FO24Mux 0
+8idMZ4:SG:clock2desiredFreq 50
+8idMZ4:SG:clock3desiredFreq 20
+8idMZ4:SG:clock4desiredFreq 10
+8idMZ4:SG:clock5desiredFreq 250
+8idMZ4:SG:clock6desiredFreq 248
+8idMZ4:SG:clock1Config.D 0
+8idMZ4:SG:In_1Do.OUT 
+8idMZ4:SG:In_2Do.OUT 
+8idMZ4:SG:In_3Do.OUT 
+8idMZ4:SG:In_4Do.OUT 
+8idMZ4:SG:In_5Do.OUT 
+8idMZ4:SG:In_6Do.OUT 
+8idMZ4:SG:In_7Do.OUT 
+8idMZ4:SG:In_8Do.OUT 
+8idMZ4:SG:In_9Do.OUT 
+8idMZ4:SG:In_10Do.OUT 
+8idMZ4:SG:In_11Do.OUT 
+8idMZ4:SG:In_12Do.OUT 
+8idMZ4:SG:In_13Do.OUT 
+8idMZ4:SG:In_14Do.OUT 
+8idMZ4:SG:In_15Do.OUT 
+8idMZ4:SG:In_16Do.OUT 
+8idMZ4:SG:Out_1Do.OUT 
+8idMZ4:SG:Out_2Do.OUT 
+8idMZ4:SG:Out_3Do.OUT 
+8idMZ4:SG:Out_4Do.OUT 
+8idMZ4:SG:Out_5Do.OUT 
+8idMZ4:SG:Out_6Do.OUT 
+8idMZ4:SG:Out_7Do.OUT 
+8idMZ4:SG:Out_8Do.OUT 
+8idMZ4:SG:Out_9Do.OUT 
+8idMZ4:SG:Out_10Do.OUT 
+8idMZ4:SG:Out_11Do.OUT 
+8idMZ4:SG:Out_12Do.OUT 
+8idMZ4:SG:Out_13Do.OUT 
+8idMZ4:SG:Out_14Do.OUT 
+8idMZ4:SG:Out_15Do.OUT 
+8idMZ4:SG:Out_16Do.OUT 
+8idMZ4:SG:In_1IntEdge 1
+8idMZ4:SG:In_2IntEdge 0
+8idMZ4:SG:In_3IntEdge 0
+8idMZ4:SG:In_4IntEdge 0
+8idMZ4:SG:In_5IntEdge 0
+8idMZ4:SG:In_6IntEdge 0
+8idMZ4:SG:In_7IntEdge 0
+8idMZ4:SG:In_8IntEdge 0
+8idMZ4:SG:In_9IntEdge 0
+8idMZ4:SG:In_10IntEdge 0
+8idMZ4:SG:In_11IntEdge 0
+8idMZ4:SG:In_12IntEdge 0
+8idMZ4:SG:In_13IntEdge 0
+8idMZ4:SG:In_14IntEdge 0
+8idMZ4:SG:In_15IntEdge 0
+8idMZ4:SG:In_16IntEdge 0
+8idMZ4:SG:Out_1IntEdge 0
+8idMZ4:SG:Out_2IntEdge 0
+8idMZ4:SG:Out_3IntEdge 0
+8idMZ4:SG:Out_4IntEdge 0
+8idMZ4:SG:Out_5IntEdge 0
+8idMZ4:SG:Out_6IntEdge 0
+8idMZ4:SG:Out_7IntEdge 0
+8idMZ4:SG:Out_8IntEdge 0
+8idMZ4:SG:Out_9IntEdge 0
+8idMZ4:SG:Out_10IntEdge 0
+8idMZ4:SG:Out_11IntEdge 0
+8idMZ4:SG:Out_12IntEdge 0
+8idMZ4:SG:Out_13IntEdge 0
+8idMZ4:SG:Out_14IntEdge 1
+8idMZ4:SG:Out_15IntEdge 0
+8idMZ4:SG:Out_16IntEdge 0
+8idMZ4:SG:busy1.OUT 
+8idMZ4:SG:busy1.FLNK 0
+8idMZ4:SG:busy2.OUT 
+8idMZ4:SG:busy2.FLNK 0
+8idMZ4:SG:pulseOut.OUT 
+8idMZ4:SG:npulseOut.OUT 
+8idMZ4:SG:clock1.OUT 
+8idMZ4:SG:clock1.SCAN 0
+8idMZ4:SG:clock2.OUT 
+8idMZ4:SG:clock2.SCAN 0
+8idMZ4:SG:sseq1.SCAN 0
+8idMZ4:SG:sseq1.DESC 
+8idMZ4:SG:sseq1.PREC 0
+8idMZ4:SG:sseq1.DLY1 0
+8idMZ4:SG:sseq1.DOL1 
+8idMZ4:SG:sseq1.DO1 0
+8idMZ4:SG:sseq1.STR1 0
+8idMZ4:SG:sseq1.LNK1 
+8idMZ4:SG:sseq1.WAIT1 0
+8idMZ4:SG:sseq1.DLY2 0
+8idMZ4:SG:sseq1.DOL2 
+8idMZ4:SG:sseq1.DO2 0
+8idMZ4:SG:sseq1.STR2 0
+8idMZ4:SG:sseq1.LNK2 
+8idMZ4:SG:sseq1.WAIT2 0
+8idMZ4:SG:sseq1.DLY3 0
+8idMZ4:SG:sseq1.DOL3 
+8idMZ4:SG:sseq1.DO3 0
+8idMZ4:SG:sseq1.STR3 0
+8idMZ4:SG:sseq1.LNK3 
+8idMZ4:SG:sseq1.WAIT3 0
+8idMZ4:SG:sseq1.DLY4 0
+8idMZ4:SG:sseq1.DOL4 
+8idMZ4:SG:sseq1.DO4 0
+8idMZ4:SG:sseq1.STR4 0
+8idMZ4:SG:sseq1.LNK4 
+8idMZ4:SG:sseq1.WAIT4 0
+8idMZ4:SG:sseq1.DLY5 0
+8idMZ4:SG:sseq1.DOL5 
+8idMZ4:SG:sseq1.DO5 0
+8idMZ4:SG:sseq1.STR5 0
+8idMZ4:SG:sseq1.LNK5 
+8idMZ4:SG:sseq1.WAIT5 0
+8idMZ4:SG:sseq1.DLY6 0
+8idMZ4:SG:sseq1.DOL6 
+8idMZ4:SG:sseq1.DO6 0
+8idMZ4:SG:sseq1.STR6 0
+8idMZ4:SG:sseq1.LNK6 
+8idMZ4:SG:sseq1.WAIT6 0
+8idMZ4:SG:sseq1.DLY7 0
+8idMZ4:SG:sseq1.DOL7 
+8idMZ4:SG:sseq1.DO7 0
+8idMZ4:SG:sseq1.STR7 0
+8idMZ4:SG:sseq1.LNK7 
+8idMZ4:SG:sseq1.WAIT7 0
+8idMZ4:SG:sseq1.DLY8 0
+8idMZ4:SG:sseq1.DOL8 
+8idMZ4:SG:sseq1.DO8 0
+8idMZ4:SG:sseq1.STR8 0
+8idMZ4:SG:sseq1.LNK8 
+8idMZ4:SG:sseq1.WAIT8 0
+8idMZ4:SG:sseq1.DLY9 0
+8idMZ4:SG:sseq1.DOL9 
+8idMZ4:SG:sseq1.DO9 0
+8idMZ4:SG:sseq1.STR9 0
+8idMZ4:SG:sseq1.LNK9 
+8idMZ4:SG:sseq1.WAIT9 0
+8idMZ4:SG:sseq1.DLYA 0
+8idMZ4:SG:sseq1.DOLA 
+8idMZ4:SG:sseq1.DOA 0
+8idMZ4:SG:sseq1.STRA 0
+8idMZ4:SG:sseq1.LNKA 
+8idMZ4:SG:sseq1.WAITA 0
+8idMZ4:SG:sseq1.FLNK 0
+8idMZ4:SG:sseq1.SELL 
+8idMZ4:SG:sseq1.SELN 1
+8idMZ4:SG:sseq1.SELM 0
+8idMZ4:SG:sseq2.SCAN 0
+8idMZ4:SG:sseq2.DESC 
+8idMZ4:SG:sseq2.PREC 0
+8idMZ4:SG:sseq2.DLY1 0
+8idMZ4:SG:sseq2.DOL1 
+8idMZ4:SG:sseq2.DO1 0
+8idMZ4:SG:sseq2.STR1 0
+8idMZ4:SG:sseq2.LNK1 
+8idMZ4:SG:sseq2.WAIT1 0
+8idMZ4:SG:sseq2.DLY2 0
+8idMZ4:SG:sseq2.DOL2 
+8idMZ4:SG:sseq2.DO2 0
+8idMZ4:SG:sseq2.STR2 0
+8idMZ4:SG:sseq2.LNK2 
+8idMZ4:SG:sseq2.WAIT2 0
+8idMZ4:SG:sseq2.DLY3 0
+8idMZ4:SG:sseq2.DOL3 
+8idMZ4:SG:sseq2.DO3 0
+8idMZ4:SG:sseq2.STR3 0
+8idMZ4:SG:sseq2.LNK3 
+8idMZ4:SG:sseq2.WAIT3 0
+8idMZ4:SG:sseq2.DLY4 0
+8idMZ4:SG:sseq2.DOL4 
+8idMZ4:SG:sseq2.DO4 0
+8idMZ4:SG:sseq2.STR4 0
+8idMZ4:SG:sseq2.LNK4 
+8idMZ4:SG:sseq2.WAIT4 0
+8idMZ4:SG:sseq2.DLY5 0
+8idMZ4:SG:sseq2.DOL5 
+8idMZ4:SG:sseq2.DO5 0
+8idMZ4:SG:sseq2.STR5 0
+8idMZ4:SG:sseq2.LNK5 
+8idMZ4:SG:sseq2.WAIT5 0
+8idMZ4:SG:sseq2.DLY6 0
+8idMZ4:SG:sseq2.DOL6 
+8idMZ4:SG:sseq2.DO6 0
+8idMZ4:SG:sseq2.STR6 0
+8idMZ4:SG:sseq2.LNK6 
+8idMZ4:SG:sseq2.WAIT6 0
+8idMZ4:SG:sseq2.DLY7 0
+8idMZ4:SG:sseq2.DOL7 
+8idMZ4:SG:sseq2.DO7 0
+8idMZ4:SG:sseq2.STR7 0
+8idMZ4:SG:sseq2.LNK7 
+8idMZ4:SG:sseq2.WAIT7 0
+8idMZ4:SG:sseq2.DLY8 0
+8idMZ4:SG:sseq2.DOL8 
+8idMZ4:SG:sseq2.DO8 0
+8idMZ4:SG:sseq2.STR8 0
+8idMZ4:SG:sseq2.LNK8 
+8idMZ4:SG:sseq2.WAIT8 0
+8idMZ4:SG:sseq2.DLY9 0
+8idMZ4:SG:sseq2.DOL9 
+8idMZ4:SG:sseq2.DO9 0
+8idMZ4:SG:sseq2.STR9 0
+8idMZ4:SG:sseq2.LNK9 
+8idMZ4:SG:sseq2.WAIT9 0
+8idMZ4:SG:sseq2.DLYA 0
+8idMZ4:SG:sseq2.DOLA 
+8idMZ4:SG:sseq2.DOA 0
+8idMZ4:SG:sseq2.STRA 0
+8idMZ4:SG:sseq2.LNKA 
+8idMZ4:SG:sseq2.WAITA 0
+8idMZ4:SG:sseq2.FLNK 0
+8idMZ4:SG:sseq2.SELL 
+8idMZ4:SG:sseq2.SELN 1
+8idMZ4:SG:sseq2.SELM 0
+<END>

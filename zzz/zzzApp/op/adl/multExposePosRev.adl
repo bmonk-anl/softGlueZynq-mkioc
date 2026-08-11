@@ -1,0 +1,455 @@
+
+file {
+	name="/net/s100dserv/xorApps/zed/epics/ioc/ioczed/zzzApp/op/adl/multExposePosRev.adl"
+	version=030111
+}
+display {
+	object {
+		x=1005
+		y=54
+		width=370
+		height=240
+	}
+	clr=14
+	bclr=1
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=1
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=10
+		y=0
+		width=380
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Multiple Exposure Position Control"
+}
+"choice button" {
+	object {
+		x=20
+		y=30
+		width=110
+		height=40
+	}
+	control {
+		chan="$(P)$(Q)reset"
+		clr=14
+		bclr=51
+	}
+}
+"message button" {
+	object {
+		x=150
+		y=30
+		width=80
+		height=22
+	}
+	control {
+		chan="$(P)$(Q)trigger"
+		clr=14
+		bclr=51
+	}
+	label="Trigger"
+	press_msg="1"
+}
+composite {
+	object {
+		x=240
+		y=65
+		width=120
+		height=40
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=240
+				y=65
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Current Pos"
+			align="horiz. centered"
+		}
+		"text update" {
+			object {
+				x=260
+				y=85
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(Q)currPos"
+				clr=54
+				bclr=1
+			}
+			align="horiz. centered"
+			format="string"
+			limits {
+			}
+		}
+	}
+}
+"choice button" {
+	object {
+		x=150
+		y=55
+		width=80
+		height=35
+	}
+	control {
+		chan="$(P)$(Q)mode"
+		clr=14
+		bclr=51
+	}
+}
+text {
+	object {
+		x=240
+		y=20
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Move time:"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=260
+		y=40
+		width=70
+		height=20
+	}
+	monitor {
+		chan="$(P)$(Q)timeCalc"
+		clr=54
+		bclr=1
+	}
+	align="horiz. centered"
+	format="string"
+	limits {
+	}
+}
+composite {
+	object {
+		x=10
+		y=110
+		width=285
+		height=130
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=145
+				y=110
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="X"
+			align="horiz. centered"
+		}
+		text {
+			object {
+				x=225
+				y=110
+				width=70
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Y"
+			align="horiz. centered"
+		}
+		"related display" {
+			object {
+				x=225
+				y=220
+				width=70
+				height=20
+			}
+			display[0] {
+				label="xCalc"
+				name="yyCalcoutRecord.adl"
+				args="P=$(P),C=$(Q)xCalc"
+			}
+			display[1] {
+				label="yCalc"
+				name="yyCalcoutRecord.adl"
+				args="P=$(P),C=$(Q)yCalc"
+			}
+			display[2] {
+				label="calcStartInc"
+				name="yyTransform.adl"
+				args="P=$(P),T=$(Q)calcStartInc"
+			}
+			display[3] {
+				label="writeToMotors"
+				name="yyTransform.adl"
+				args="P=$(P),T=$(Q)writeToMotors"
+			}
+			clr=0
+			bclr=17
+			label="-debug"
+		}
+		text {
+			object {
+				x=10
+				y=175
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="initPos"
+			align="horiz. centered"
+		}
+		"text entry" {
+			object {
+				x=145
+				y=175
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)xInitPos"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=225
+				y=175
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)yInitPos"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=10
+				y=200
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="distance"
+			align="horiz. centered"
+		}
+		"text entry" {
+			object {
+				x=145
+				y=200
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)xDistance"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=225
+				y=200
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)yDistance"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=10
+				y=150
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="numPositions"
+			align="horiz. centered"
+		}
+		"text entry" {
+			object {
+				x=145
+				y=150
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)numX"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=225
+				y=150
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)numY"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=10
+				y=125
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="motorName"
+			align="horiz. centered"
+		}
+		"text entry" {
+			object {
+				x=145
+				y=125
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)xMotorName.AA"
+				clr=14
+				bclr=51
+			}
+			format="string"
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=225
+				y=125
+				width=70
+				height=20
+			}
+			control {
+				chan="$(P)$(Q)yMotorName.AA"
+				clr=14
+				bclr=51
+			}
+			format="string"
+			limits {
+			}
+		}
+	}
+}

@@ -1,0 +1,357 @@
+
+file {
+	name="/net/s29dserv/xorApps/epics/synApps_6_1/ioc/29id_dohn/align_m3r.adl"
+	version=030111
+}
+display {
+	object {
+		x=1385
+		y=103
+		width=400
+		height=300
+	}
+	clr=14
+	bclr=2
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=79
+		y=13
+		width=150
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="M3R Alignment"
+}
+"choice button" {
+	object {
+		x=117
+		y=54
+		width=150
+		height=20
+	}
+	control {
+		chan="$(P)align_m3r:startAlign"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=39
+		y=56
+		width=50
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Start"
+}
+text {
+	object {
+		x=130
+		y=78
+		width=100
+		height=14
+	}
+	"basic attribute" {
+		clr=20
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="a"
+		chan="PA:29ID:SDS_BLOCKING_BEAM"
+	}
+	textix="Shutter Closed"
+}
+text {
+	object {
+		x=114
+		y=105
+		width=100
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Parameters"
+}
+text {
+	object {
+		x=111
+		y=223
+		width=100
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Readbacks"
+}
+text {
+	object {
+		x=23
+		y=150
+		width=180
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Motor Position Minimum"
+}
+"text entry" {
+	object {
+		x=220
+		y=149
+		width=86
+		height=16
+	}
+	control {
+		chan="$(P)align_m3r:motor_min"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=23
+		y=171
+		width=180
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Motor Position Maximum"
+}
+"text entry" {
+	object {
+		x=220
+		y=170
+		width=86
+		height=16
+	}
+	control {
+		chan="$(P)align_m3r:motor_max"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=23
+		y=192
+		width=180
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Motor Start Position"
+}
+"text entry" {
+	object {
+		x=220
+		y=191
+		width=86
+		height=16
+	}
+	control {
+		chan="$(P)align_m3r:motor_start"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=23
+		y=129
+		width=180
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Desired Pixel Location"
+}
+"text entry" {
+	object {
+		x=220
+		y=128
+		width=86
+		height=16
+	}
+	control {
+		chan="$(P)align_m3r:desired_pixel"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=28
+		y=242
+		width=150
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Beam Pixel Location"
+}
+"text update" {
+	object {
+		x=194
+		y=242
+		width=90
+		height=14
+	}
+	monitor {
+		chan="29id_ps6:Stats1:CentroidX_RBV"
+		clr=14
+		bclr=57
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=193
+		y=261
+		width=90
+		height=14
+	}
+	monitor {
+		chan="29id_m3r:RY_MON"
+		clr=14
+		bclr=57
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=27
+		y=261
+		width=150
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Mirror Motor Position"
+}
+text {
+	object {
+		x=27
+		y=280
+		width=150
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Mirror Motor Status"
+}
+"text update" {
+	object {
+		x=193
+		y=280
+		width=90
+		height=14
+	}
+	monitor {
+		chan="29id_m3r:SYSTEM_STS"
+		clr=14
+		bclr=57
+	}
+	limits {
+	}
+}

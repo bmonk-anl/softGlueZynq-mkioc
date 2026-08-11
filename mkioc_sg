@@ -1,0 +1,118 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+TEMPLATE_DIR="$SCRIPT_DIR/zzz"
+
+echo "setting umask to 002"
+umask 002
+
+# List of filenames to process for renaming or content replacement
+files_to_process=(
+  "start_epics*"
+  "start_caQtDM*"
+  "run"
+  "in-screen.sh"
+  "start_putrecorder"
+  "macros*.py"
+)
+
+
+function print_help
+{
+    echo "Usage: mkioc_sg [options] ioc_name"
+}
+
+# Function to process files for renaming and content replacement
+process_files() {
+  local filenames=("$@")
+  local top_dir="$PWD"
+  local iocboot_path="$top_dir/iocBoot/ioc$IOC_NAME"
+
+  for filename in "${filenames[@]}"; do
+    find . -type f -name "$(basename "$filename")" | while read -r file; do
+      if [[ -f "$file" ]]; then
+        echo "Processing file: $file"
+
+        # Replace zzz inside contents BEFORE rename
+        echo "Replacing 'zzz' with '$IOC_NAME' in $file"
+        sed -i "s/zzz/$IOC_NAME/g" "$file"
+
+        # Patch EPICS_APP path if needed
+        base_name="$(basename "$file")"
+        if [[ "$base_name" == start_epics_* || "$base_name" == start_caQtDM_* ]]; then
+          echo "Patching EPICS_APP in $file"
+          sed -i -E "s|setenv[[:space:]]+EPICS_APP[[:space:]]+.*|setenv EPICS_APP \"$PWD\"|" "$file"
+        fi
+
+		# Replace SAVE_DATA_PATH in macros*.py files
+        if [[ "$base_name" == macros*.py ]]; then
+          echo "Replacing SAVE_DATA_PATH in $file"
+          sed -i "s|SAVE_DATA_PATH|$iocboot_path|g" "$file"
+        fi
+
+        # Rename file AFTER processing contents
+        if [[ "$base_name" == *zzz* ]]; then
+          new_name="$(dirname "$file")/$(basename "$file" | sed "s/zzz/$IOC_NAME/g")"
+          echo "Renaming file: $file to $new_name"
+          mv "$file" "$new_name"
+        fi
+      fi
+    done
+  done
+}
+
+
+while getopts hvfgns: option
+do
+    case "${option}" in
+        h)
+            print_help
+            exit 2
+        ;;
+    esac
+done
+
+shift $((OPTIND - 1 ))
+
+if [ "${#@}" -ne 1 ]; then
+    echo "Error: one IOC name is required"
+    exit 1
+fi
+
+IOC_NAME=$1
+
+# Create the IOC
+if [[ -d "$IOC_NAME" ]] ; then
+    echo "Directory already exists"
+    exit 1
+fi
+
+if [[ ! -d "$TEMPLATE_DIR" ]]; then
+    echo "Template directory not found: $TEMPLATE_DIR"
+    exit 1
+fi
+
+cp -r "$TEMPLATE_DIR" "$IOC_NAME"
+
+cd "$IOC_NAME" || { echo "Failed to enter directory $IOC_NAME"; exit 1; }
+
+export EPICS_HOST_ARCH=linux-x86_64
+
+make distclean
+
+/APSshare/epics/synApps_6_2_1/support/utils/changePrefix zzz "$IOC_NAME"
+
+# Find all files with ".sav" in their name and add them to files_to_process
+while IFS= read -r -d '' savfile; do
+  files_to_process+=("${savfile#./}")  # strip leading ./ for consistency
+done < <(find . -type f -name "*sav*" -print0)
+
+# Call the function with the list of files to process
+process_files "${files_to_process[@]}"
+
+echo "changing permissions of startup and autosave directories to a+w,g+s"
+# chmod a+w,g+s "./iocBoot/ioc$IOC_NAME"
+# chmod -R a+w,g+s "./iocBoot/ioc$IOC_NAME/autosave"
+chmod 777 "./iocBoot/ioc$IOC_NAME"
+chmod -R 777 "./iocBoot/ioc$IOC_NAME/autosave"
+

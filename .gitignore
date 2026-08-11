@@ -1,0 +1,29 @@
+# EPICS build products
+bin/
+db/
+dbd/
+html/
+include/
+lib/
+O.*/
+configure/O.*/
+
+# Generated dependency and build files
+*.d
+*.o
+*.a
+*.so
+*.out
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Editor and operating-system files
+*~
+*.swp
+.DS_Store
+
+# IOC runtime output (template seed .sav and .cfg files remain tracked)
+dbl-all.txt
+*.log

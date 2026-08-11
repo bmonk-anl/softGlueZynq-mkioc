@@ -1,0 +1,5 @@
+resetDMA {
+	reset {
+	  	exec 'system "rmmod dmaproxy; modprobe dmaproxy"';
+	}
+}
