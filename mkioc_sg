@@ -96,8 +96,6 @@ cp -r "$TEMPLATE_DIR" "$IOC_NAME"
 
 cd "$IOC_NAME" || { echo "Failed to enter directory $IOC_NAME"; exit 1; }
 
-export EPICS_HOST_ARCH=linux-x86_64
-
 make distclean
 
 if ! SUPPORT=$(make --no-print-directory -s -f - print-support <<'MAKEFILE'

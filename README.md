@@ -21,7 +21,6 @@ directories writable.
 This template is intended for the APS softGlueZynq environment. It currently
 assumes:
 
-- EPICS host architecture `linux-x86_64`
 - A synApps support tree configured by `SUPPORT` in `zzz/configure/RELEASE`,
   containing `utils/changePrefix`
 - APS EPICS Base, synApps, display-manager, and utility paths referenced by the
