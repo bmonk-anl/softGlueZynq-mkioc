@@ -100,7 +100,28 @@ export EPICS_HOST_ARCH=linux-x86_64
 
 make distclean
 
-/APSshare/epics/synApps_6_2_1/support/utils/changePrefix zzz "$IOC_NAME"
+if ! SUPPORT=$(make --no-print-directory -s -f - print-support <<'MAKEFILE'
+TOP := $(CURDIR)
+include $(TOP)/configure/RELEASE
+
+print-support:
+	@printf '%s\n' '$(SUPPORT)'
+MAKEFILE
+); then
+    echo "Failed to determine SUPPORT from configure/RELEASE"
+    exit 1
+fi
+
+CHANGE_PREFIX="$SUPPORT/utils/changePrefix"
+if [[ ! -x "$CHANGE_PREFIX" ]]; then
+    echo "changePrefix not found or not executable: $CHANGE_PREFIX"
+    exit 1
+fi
+
+if ! "$CHANGE_PREFIX" zzz "$IOC_NAME"; then
+    echo "changePrefix failed: $CHANGE_PREFIX"
+    exit 1
+fi
 
 # Find all files with ".sav" in their name and add them to files_to_process
 while IFS= read -r -d '' savfile; do

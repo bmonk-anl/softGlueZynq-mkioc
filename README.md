@@ -12,12 +12,6 @@ Run the script from the directory in which the new IOC should be created:
 /path/to/softGlueZynq-mkioc/mkioc_sg IOC_NAME
 ```
 
-For example, this creates `mySG` in the current directory:
-
-```sh
-~/softGlueZynq-mkioc/mkioc_sg mySG
-```
-
 The script copies the `zzz` directory, runs the synApps `changePrefix` utility,
 updates startup paths and selected files, and makes the IOC startup and autosave
 directories writable.
@@ -28,21 +22,14 @@ This template is intended for the APS softGlueZynq environment. It currently
 assumes:
 
 - EPICS host architecture `linux-x86_64`
-- The synApps `changePrefix` utility at
-  `/APSshare/epics/synApps_6_2_1/support/utils/changePrefix`
+- A synApps support tree configured by `SUPPORT` in `zzz/configure/RELEASE`,
+  containing `utils/changePrefix`
 - APS EPICS Base, synApps, display-manager, and utility paths referenced by the
   files under `zzz`
 - A `linux-arm` IOC target
 
 Review `zzz/configure/RELEASE` and the generated IOC's startup files before
 using the template in a different environment.
-
-## Provenance
-
-The IOC template is derived from APS synApps IOC templates, ioczed, and
-softGlueZynq, with subsequent APS modifications. The bundled template is a
-modified, deployment-oriented IOC scaffold and is not part of the upstream
-softGlueZynq module.
 
 ## License
 
