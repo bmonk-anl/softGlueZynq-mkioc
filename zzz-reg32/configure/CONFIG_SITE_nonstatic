@@ -17,8 +17,8 @@
 # Set CHECK_RELEASE to NO to disable checking completely.
 # Set CHECK_RELEASE to WARN to perform consistency checking but
 #   continue building anyway if conflicts are found.
-#CHECK_RELEASE = YES
-CHECK_RELEASE = WARN
+CHECK_RELEASE = YES
+#CHECK_RELEASE = WARN
 
 # Set this when you only want to compile this application
 #   for a subset of the cross-compiled target architectures
@@ -45,6 +45,3 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 -include $(TOP)/../configure/CONFIG_SITE.local
 -include $(TOP)/configure/CONFIG_SITE.local
 -include $(TOP)/configure/CONFIG_SITE.local.$(OS_CLASS)
-
-#STATIC_BUILD=YES
-#SHARED_LIBRARIES = NO

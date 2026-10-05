@@ -28,7 +28,7 @@ initZynqInterrupts("$(IPORT)","softGlue_")
 #
 # initZynqSingleRegisterPort(const char *portName, const char *componentName)
 initZynqSingleRegisterPort("$(SPORT)", "softGlue_")
-initZynqSingleRegisterPort("$(RPORT)", "softGlueReg64_")
+initZynqSingleRegisterPort("$(RPORT)", "softGlueReg32_")
 
 
 ################################################################################
@@ -44,7 +44,7 @@ dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_SignalShow.db","P=$(PREFIX),H=$(INSTA
 #dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_FPGAContent.db", "P=$(PREFIX),H=$(INSTANCE),PORT=$(SPORT),READEVENT=$(READEVENT)")
 dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_FPGAContent_BCDALAB.db", "P=$(PREFIX),H=$(INSTANCE),PORT=$(SPORT),READEVENT=$(READEVENT)")
 #dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_FPGARegisters.db", "P=$(PREFIX),H=$(INSTANCE),PORT=$(RPORT),READEVENT=$(READEVENT)")
-dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_FPGARegisters64_BCDALAB.db", "P=$(PREFIX),H=$(INSTANCE),PORT=$(RPORT),READEVENT=$(READEVENT)")
+dbLoadRecords("$(SOFTGLUEZYNQ)/db/softGlue_FPGARegisters_BCDALAB.db", "P=$(PREFIX),H=$(INSTANCE),PORT=$(RPORT),READEVENT=$(READEVENT)")
 
 
 #    Interrupt support.
@@ -78,7 +78,7 @@ doAfterIocInit("create_manual_set('$(CONFIG)Menu.req','P=$(PREFIX),CONFIG=$(CONF
 # attach acquireDma plotter to FO_15 interrupt.
 #var acquireDmaDebug,1
 # acquireDmaPrepare(char *componentName, epicsUInt32 risingMask, int notused, int FIFOwords_reg)
-doAfterIocInit("acquireDmaPrepare(softGlueReg64_, 0x40000000, 0, 93)")
+doAfterIocInit("acquireDmaPrepare(softGlueReg32_, 0x40000000, 0, 61)")
 dbLoadRecords("$(SOFTGLUEZYNQ)/db/acquireDma.db","P=$(PREFIX),Q=1,N=100000")
 # read encoders/interferometers and use caputRecorder macro to calc FFT.
 #!#dbLoadRecords("$(SOFTGLUEZYNQ)/db/pixelTriggerDmaListFFT.db","P=$(PREFIX),N=1000000")
@@ -95,7 +95,6 @@ dbLoadRecords("$(SOFTGLUEZYNQ)/db/acquireDma.db","P=$(PREFIX),Q=1,N=100000")
 # Note clockConfig assumes clock_wiz0 has a 100 MHz input.  For softGlue_FPGAContent_7020_dma_bunch_ext, we have a 44 MHz input freq.
 # In this case, just don't load clockConfig.
 dbLoadRecords("$(SOFTGLUEZYNQ)/db/clockConfig.db","P=$(PREFIX),H=$(INSTANCE),Q=1")
-dbLoadRecords("$(SOFTGLUEZYNQ)/db/clockConfig_configMenu.db","P=$(PREFIX),H=$(INSTANCE),Q=1,CONFIG=$(CONFIG)")
 #dbLoadRecords("$(SOFTGLUEZYNQ)/db/clockConfigExt.db","P=$(PREFIX),H=$(INSTANCE),Q=1")
 
 # 16-input scaler
