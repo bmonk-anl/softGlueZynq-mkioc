@@ -39,7 +39,7 @@ include $(SUPPORT)/configure/RELEASE
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-SOFTGLUEZYNQ=/net/s19iddserv/xorApps/epics/synApps_SG/support/softGlueZynq_sendalld
+SOFTGLUEZYNQ=/APSshare/epics/synApps_6_3/support/softGlueZynq-R3-1
 
 # These lines allow developers to override these RELEASE settings
 # without having to modify this file directly.

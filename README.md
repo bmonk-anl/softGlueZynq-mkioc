@@ -27,7 +27,7 @@ and autosave directories writable.
 
 - `zzz` uses `softGlueReg64_`, the 64-bit BCDALAB register database, and DMA
   FIFO-word register 93. It also loads the clock configuration menu database
-  and selects the reg64-capable `softGlueZynq_sendalld` support tree.
+  and selects the reg64-capable `softGlueZynq-R3-1` support tree.
 - `zzz-reg32` preserves the previous `softGlueReg32_` configuration and DMA
   FIFO-word register 61.
 
